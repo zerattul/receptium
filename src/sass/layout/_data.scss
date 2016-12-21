@@ -1,0 +1,101 @@
+// ::::::::::: data.scss :::::::::::: //
+.main{
+  display : flex;
+  flex-direction: column;
+
+  &-search{
+    border-top      : 1px solid rgba($fontBase, 0.3);
+    border-bottom   : 1px solid rgba($fontBase, 0.3);
+    display         : flex;
+    padding         : 1rem 1rem;
+    justify-content : space-between;
+    align-items     : center;
+
+    &__count{
+      font-size: 1.3rem;
+    }
+  }
+
+  &-data{
+    margin-top: 2rem;
+
+    &-table{
+      width : 100%;
+
+      &-thead{
+        padding : 0.5rem;
+
+        th{
+          text-align: center;
+          font-size: 1.2rem;
+          padding-bottom: 1rem;
+        }
+
+        &__add{
+          background-color : $fontPrimary;
+          border           : none;
+          color            : lighten($fontBase, 30);
+          border-radius    : 30px;
+          font-size        : 1rem;
+          padding          : 0.5rem 1.5rem;
+        }
+      }
+
+      &-tbody{
+        text-align: center;
+        width : 100%;
+
+        tr{
+          border-bottom: 1rem solid transparent;
+        }
+
+        .nombre{
+          width : 48%;
+        }
+
+        .col{
+          width : 16%;
+        }
+
+        .colbtn{
+          width : 10%;
+
+          &-crud{
+            display : flex;
+            justify-content: center;
+            align-items: center;
+
+            &__edit, &__delete{
+              background-color : $bgBtn-main;
+              border           : none;
+              outline          : none;
+              color            : $fontBase;
+              display          : inline-block;
+              width            : 45px;
+              height           : 45px;
+              border-radius    : 50%;
+              line-height      : 45px;
+              font-size        : 1.2rem;
+              transition       : $transition;
+              cursor           : pointer;
+            }
+
+            &__edit{
+              margin-right: 0.5rem;
+
+              &:hover{
+                background-color : $hover;
+                color            : lighten($fontBase, 20);
+              }
+            }
+
+            &__delete:hover{
+              background-color : $fontSecondary;
+              color            : lighten($fontBase, 20);
+            }
+          }
+        }
+      }
+    }
+  }
+}

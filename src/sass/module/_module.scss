@@ -1,0 +1,60 @@
+// ::::::::::: Module :::::::::::: //
+@import "mixins";
+.m-section{
+  display         : flex;
+  justify-content : center;
+}
+
+.m-center{
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  width           : 1100px;
+  max-width       : 1440px;
+}
+
+.m-crud{
+  display : flex;
+
+  &__edit, &__delete{
+    background-color : $bgBtn-main;
+    border           : none;
+    outline          : none;
+    color            : $fontBase;
+    display          : inline-block;
+    width            : 50px;
+    height           : 50px;
+    border-radius    : 50%;
+    line-height      : 50px;
+    font-size        : 1.4rem;
+    transition       : $transition;
+    cursor           : pointer;
+  }
+
+  &__edit{
+    margin-right: 1rem;
+
+    &:hover{
+      background-color : $hover;
+      color            : lighten($fontBase, 20);
+    }
+  }
+
+  &__delete:hover{
+    background-color : $fontSecondary;
+    color            : lighten($fontBase, 20);
+  }
+}
+
+// Llamada de los mixin //
+.mx-login__input { @include input(darken($fontBase,30), $bgInput, auto) };
+.mx-login__btn   { @include btnInput($fontBase, $bgBtn, lighten($bgBtn,10)) };
+.mx-cont__user   { @include btnBasic($bgBtn-main, darken($fontBase,20), 1.1rem, 250px)};
+.mx__input   { @include input(darken($fontBase,30), $bgBtn-main, 50%) };
+
+.mx-createEvente__event   { @include btnHover($bgBtn-main, darken($fontBase,20), 1.1rem, auto)}
+.mx__createBtn { @include btnHover($fontPrimary, lighten($fontBase,30), 1.1rem, 250px)}
+
+.mx__nombre { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 98%)};
+.mx__invitados { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 95%)};
+.mx__mesa { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 95%)};

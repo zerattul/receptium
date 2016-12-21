@@ -1,0 +1,21 @@
+// :::::::::::::: topbar.scss ::::::::::::::: //
+.topBar{
+  background-color : $bgBar;
+  height           : 80px;
+
+  &-cont{
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    &__logout{
+      color      : $fontBase;
+      transition : $transition;
+      cursor     : pointer;
+
+      &:hover{
+        color           : $fontPrimary;
+        text-decoration : underline;
+      }
+    }
+  }
+}

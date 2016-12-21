@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+  title Receptium
+  each css in files.CSS
+    link(rel="stylesheet", href=`${css}`)
+
+body
+  //- TopBar
+  section.m-section.topBar
+    .m-center
+      .topBar-cont
+        span.mx-cont__user Usuario
+        a(href="#").topBar-cont__logout Salir
+
+  //- Create Event
+  section.m-section
+    .m-center
+      .createEvent
+        h1.createEvent__title Administra Todos tus Eventos
+        .createEvent-cont
+          .createEvent-cont-btns
+            button.mx__createBtn Crear Evento
+          .createEvent-cont-btns
+            a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Boda Liz y Juan / 12 de Febrero 2017
+            a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Lista de Invitados
+            .m-crud
+              button.m-crud__edit.icon-pencil
+              button.m-crud__delete.icon-x
+
+
+  each js in files.JS
+    script(src=`${js}`)

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+  title Receptium
+  each css in files.CSS
+    link(rel="stylesheet", href=`${css}`)
+
+body
+  //- TopBar
+  section.m-section.topBar
+    .m-center
+      .topBar-cont
+        span.mx-cont__user Usuario
+        a(href="#").topBar-cont__logout Salir
+
+  //- Main
+  section.m-section
+    .m-center
+      .wrapper
+        h1.createEvent__title Llena los datos con la información correspondiente
+        .main
+          .main-search
+            input(type="text" name="search" placeholder="Buscar").mx__input
+            p.main-search__count Invitados Confirmados 23 / 120
+
+          .main-data
+            table.main-data-table
+              thead.main-data-table-thead
+                th Nombre
+                th Invitados
+                th Mesa
+                th
+                  button.main-data-table-thead__add Agregar
+
+              tbody.main-data-table-tbody
+                tr
+                  td.nombre
+                    p.mx__nombre Salvador Carreon Briseño
+                  td.col
+                    p.mx__invitados 3
+                  td.col
+                    p.mx__mesa 12
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Cesar Gaytan Silva
+                  td.col
+                    p.mx__invitados 2
+                  td.col
+                    p.mx__mesa 1
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Maria Karina Pinto Morales
+                  td.col
+                    p.mx__invitados 3
+                  td.col
+                    p.mx__mesa 12
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Salvador Carreon Briseño
+                  td.col
+                    p.mx__invitados 3
+                  td.col
+                    p.mx__mesa 12
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Cesar Gaytan Silva
+                  td.col
+                    p.mx__invitados 2
+                  td.col
+                    p.mx__mesa 1
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Maria Karina Pinto Morales
+                  td.col
+                    p.mx__invitados 3
+                  td.col
+                    p.mx__mesa 12
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Salvador Carreon Briseño
+                  td.col
+                    p.mx__invitados 3
+                  td.col
+                    p.mx__mesa 12
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Cesar Gaytan Silva
+                  td.col
+                    p.mx__invitados 2
+                  td.col
+                    p.mx__mesa 1
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+                tr
+                  td.nombre
+                    p.mx__nombre Maria Karina Pinto Morales
+                  td.col
+                    p.mx__invitados 3
+                  td.col
+                    p.mx__mesa 12
+                  td.colbtn
+                    .colbtn-crud
+                      button.colbtn-crud__edit.icon-pencil
+                      button.colbtn-crud__delete.icon-x
+
+
+  each js in files.JS
+    script(src=`${js}`)

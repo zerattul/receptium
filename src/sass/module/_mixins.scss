@@ -1,0 +1,81 @@
+// ::::::::::: Mixin :::::::::::: //
+
+@mixin input($color, $bg, $width){
+  background-color : $bg;
+  border           : none;
+  font-size        : 1.2rem;
+  font-weight      : $light;
+  text-align       : center;
+  padding          : 1rem 0;
+  border-radius    : 30px;
+  color            : lighten($color, 30);
+  outline          : none;
+  transition       : $transition;
+  width            : $width;
+
+  &::-webkit-input-placeholder{
+    color : $color;
+  }
+  &:-moz-placeholder {
+      color: $color;
+  }
+  &::-moz-placeholder {
+      color: $color;
+  }
+  &:-ms-input-placeholder {
+      color: $color;
+  }
+
+  &:focus{
+    background-color: lighten($bg, 5);
+  }
+}
+
+@mixin btnInput($color, $bg, $hover){
+  background-color : $bg;
+  border           : none;
+  font-size        : 1.2rem;
+  font-weight      : $light;
+  text-align       : center;
+  padding          : 1rem 0;
+  border-radius    : 30px;
+  color            : $color;
+  cursor           : pointer;
+  transition       : $transition;
+  outline          : none;
+
+  &:hover{
+    background-color: $hover;
+  }
+}
+
+
+@mixin btnBasic($bg, $fc, $fz, $width){
+  background-color : $bg;
+  width            : $width;
+  text-align       : center;
+  border-radius    : 30px;
+  padding          : 0.7rem 2rem;
+  font-size        : $fz;
+  color            : $fc;
+  display          : inline-block;
+}
+
+@mixin btnHover($bg, $fc, $fz, $width){
+  background-color : $bg;
+  width            : $width;
+  text-align       : center;
+  border-radius    : 30px;
+  padding          : 1rem 2rem;
+  font-size        : $fz;
+  color            : $fc;
+  transition       : $transition;
+  display          : inline-block;
+  border           : none;
+  outline          : none;
+  cursor           : pointer;
+
+  &:hover{
+    background-color : darken($bg, 5);
+  }
+}
