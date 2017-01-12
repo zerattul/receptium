@@ -29,6 +29,9 @@
     font-size        : 1.4rem;
     transition       : $transition;
     cursor           : pointer;
+    display : flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__edit{
@@ -46,15 +49,86 @@
   }
 }
 
+.m-modal{
+  position        : fixed;
+  top             : 0;
+  bottom          : 0;
+  left            : 0;
+  right           : 0;
+  background      : rgba(0, 0, 0, 0.6);
+  transition      : opacity 300ms;
+  visibility      : hidden;
+  opacity         : 0;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+
+  &:target{
+    visibility : visible;
+    opacity    : 1;
+  }
+
+  &-popup{
+    margin        : 70px auto;
+    padding       : 20px;
+    background    : $bgColor;
+    border-radius : 5px;
+    width         : 30%;
+    position      : relative;
+    transition    : all 300ms ease-in-out;
+    border        : 3px solid #050505;
+    width         : 700px;
+
+    h2{
+      text-align : center;
+      color      : $fontPrimary;
+      font-size  : 2rem;
+    }
+
+    &__close{
+      position        : absolute;
+      top             : 20px;
+      right           : 30px;
+      transition      : all 200ms;
+      font-size       : 30px;
+      font-weight     : bold;
+      text-decoration : none;
+      color           : #333;
+
+      &:hover{
+        color: #06D85F;
+      }
+    }
+
+    &-content{
+      overflow       : auto;
+      display        : flex;
+      flex-direction : column;
+      margin-top     : 2rem;
+
+      &__label{
+        margin-bottom: 1rem;
+      }
+
+      .mx__createEvent{
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
 // Llamada de los mixin //
-.mx-login__input { @include input(darken($fontBase,30), $bgInput, auto) };
+.mx-login__input               { @include input(darken($fontBase,30), $bgInput, auto) };
+.mx-modal-popup-content__input { @include input(darken($fontBase,30), $bgInput, auto) };
+
 .mx-login__btn   { @include btnInput($fontBase, $bgBtn, lighten($bgBtn,10)) };
 .mx-cont__user   { @include btnBasic($bgBtn-main, darken($fontBase,20), 1.1rem, 250px)};
-.mx__input   { @include input(darken($fontBase,30), $bgBtn-main, 50%) };
+.mx__input       { @include input(darken($fontBase,30), $bgBtn-main, 50%) };
 
 .mx-createEvente__event   { @include btnHover($bgBtn-main, darken($fontBase,20), 1.1rem, auto)}
-.mx__createBtn { @include btnHover($fontPrimary, lighten($fontBase,30), 1.1rem, 250px)}
+.mx__createBtn            { @include btnHover($fontPrimary, lighten($fontBase,30), 1.1rem, 250px)}
+.mx__createEvent          { @include btnHover($fontPrimary, lighten($fontBase,30), 1rem, 150px)}
 
-.mx__nombre { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 98%)};
+.mx__nombre    { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 98%)};
 .mx__invitados { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 95%)};
-.mx__mesa { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 95%)};
+.mx__mesa      { @include btnBasic($bgBtn-main, darken($fontBase,20), 1rem, 95%)};

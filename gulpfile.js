@@ -8,6 +8,7 @@ const gulp         = require("gulp"),
       browserSync  = require("browser-sync").create(),
       autoprefixer = require("gulp-autoprefixer"),
       babel        = require("gulp-babel"),
+      nodemon      = require("gulp-nodemon"),
       cleanCss     = require("gulp-clean-css"),
       concat       = require("gulp-concat"),
       htmlmin      = require("gulp-htmlmin"),
@@ -98,7 +99,7 @@ gulp.task("webp",() => {
 
 //Task server
 gulp.task("server", () => {
-  browserSync.init({
+  browserSync.init(null,{
     server : {
       baseDir           : `${dir.development}`,
       routes            : {

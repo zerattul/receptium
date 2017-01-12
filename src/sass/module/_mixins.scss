@@ -3,12 +3,13 @@
 @mixin input($color, $bg, $width){
   background-color : $bg;
   border           : none;
-  font-size        : 1.2rem;
+  font-size        : 1.1rem;
   font-weight      : $light;
   text-align       : center;
   padding          : 1rem 0;
   border-radius    : 30px;
   color            : lighten($color, 30);
+  margin-bottom    : 2rem;
   outline          : none;
   transition       : $transition;
   width            : $width;
@@ -43,6 +44,7 @@
   cursor           : pointer;
   transition       : $transition;
   outline          : none;
+  width            : 49%;
 
   &:hover{
     background-color: $hover;

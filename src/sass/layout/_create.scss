@@ -14,24 +14,30 @@
     display         : flex;
     flex-direction  : column;
     justify-content : space-between;
-    height          : 200px;
+    height          : auto;
     position        : relative;
+    align-content: space-between;
 
     &::before{
       content  : "";
       width    : 100%;
       border   : 2px dashed lighten($bgBar, 5);
       position : absolute;
-      top      : 50%;
+      top      : 85px;
     }
 
     &-btns{
       display : flex;
       align-items: center;
+      margin-bottom: 1rem;
 
       &__btn{
         margin-right: 1rem;
       }
+    }
+
+    &-wrapper{
+      margin-top: 4.5rem;
     }
   }
 }

@@ -32,7 +32,7 @@ body
                 th Invitados
                 th Mesa
                 th
-                  button.main-data-table-thead__add Agregar
+                  a(href="#popup").main-data-table-thead__add Agregar
 
               tbody.main-data-table-tbody
                 tr
@@ -135,6 +135,20 @@ body
                       button.colbtn-crud__edit.icon-pencil
                       button.colbtn-crud__delete.icon-x
 
-
+  //- Modal
+  section#popup.m-modal
+    .m-modal-popup
+      h2 Agrgegar Invitado
+      a(href="#").m-modal-popup__close &times;
+      .m-modal-popup-content
+        .m-modal-popup-content__label Nombre:
+        input(type="text" name="name" placeholder="Escribe el nombre").mx-modal-popup-content__input
+        .m-modal-popup-content__label Mesa:
+        input(type="number" name="table" min="1" max="2" placeholder="Selecciona la Mesa").mx-modal-popup-content__input
+        .m-modal-popup-content__label Correo:
+        input(type="email" name="email" placeholder="Escribe el email").mx-modal-popup-content__input
+        .m-modal-popup-content__label Teléfono:
+        input(type="number" name="phone" min="1" max="10" placeholder="Escribe el telefono").mx-modal-popup-content__input
+        button.mx__createEvent Agregar
   each js in files.JS
     script(src=`${js}`)

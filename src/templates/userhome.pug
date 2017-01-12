@@ -21,15 +21,31 @@ body
       .createEvent
         h1.createEvent__title Administra Todos tus Eventos
         .createEvent-cont
-          .createEvent-cont-btns
-            button.mx__createBtn Crear Evento
-          .createEvent-cont-btns
-            a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Boda Liz y Juan / 12 de Febrero 2017
-            a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Lista de Invitados
-            .m-crud
-              button.m-crud__edit.icon-pencil
-              button.m-crud__delete.icon-x
+          .createEvent-cont-btn
+            a(href="#popup").mx__createBtn Crear Evento
+          .createEvent-cont-wrapper
+            .createEvent-cont-wrapper-btns
+              a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Boda Liz y Juan / 12 de Febrero 2017
+              a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Lista de Invitados
+              .m-crud
+                a.m-crud__edit.icon-pencil
+                button.m-crud__delete.icon-x
+            .createEvent-cont-wrapper-btns
+              a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Boda Liz y Juan / 12 de Febrero 2017
+              a(href="#").mx-createEvente__event.createEvent-cont-btns__btn Lista de Invitados
+              .m-crud
+                a.m-crud__edit.icon-pencil
+                button.m-crud__delete.icon-x
 
-
+  section#popup.m-modal
+    .m-modal-popup
+      h2 Crear Evento
+      a(href="#").m-modal-popup__close &times;
+      .m-modal-popup-content
+        .m-modal-popup-content__label Nombre:
+        input(type="text" name="name" placeholder="Escribe el nombre").mx-modal-popup-content__input
+        .m-modal-popup-content__label Fecha:
+        input(type="date" name="date").mx-modal-popup-content__input
+        button.mx__createEvent Crear
   each js in files.JS
     script(src=`${js}`)
